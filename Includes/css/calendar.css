@@ -1,0 +1,123 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    font-size: var(--font-med);
+    font-family: 'Roboto Slab', serif;
+    padding-bottom: 1rem;
+}
+
+td {
+    padding: 0;
+}
+
+input:disabled {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+[class*='dateCell'] {
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem;
+    font-size: var(--font-large);
+    text-align: center;
+    width: 100%;
+    border: 0;
+    background-color: white;
+}
+
+.dateCellClosed {
+    cursor: not-allowed;
+}
+
+.dateCellOpen {
+    cursor: pointer;
+    border-radius: 25%;
+    transition: background-color 0.3s, border-radius 1s;
+}
+
+.dateCellOpen:hover, .dateCellOpen:focus {
+    background-color: var(--higlight-color-light);
+    outline: none;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-radius 0.4s;
+}
+
+.dateCellOpen.selected {
+    background-color: var(--higlight-color);
+    color: white;
+    border-radius: 25%;
+    transition: background-color 0.3s, border-radius 0.7s;
+}
+
+#afspraak-selected-date {
+    font-family: 'Roboto Slab', serif;
+}
+
+#kalender-container {
+    display: flex;
+}
+
+#afspraak-kalender {
+    margin: auto;
+}
+
+#afspraak-kalender table {
+    align-items: center;
+}
+
+#kalender-btns {
+    display: flex;
+}
+
+#kalender-btns input {
+    flex: 1;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--font-med);
+    border-radius: 1rem;
+    cursor: pointer;
+    align-items: center;
+
+    background-color: var(--higlight-color-light);
+
+    border: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+
+    transition: all 0.2s;
+}
+
+#kalender-btns input:hover, #kalender-btns input:focus {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    outline: 0;
+}
+
+#kalender-prev {
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+    margin-right: 0.25rem !important;
+}
+
+#kalender-next {
+    border-bottom-left-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+    margin-left: 0.25rem !important;
+}
+
+#kalender-date-desc {
+    font-family: 'Roboto Slab', serif;
+}
+
+@media only screen and (max-width: 600px) {
+    [class*='dateCell'] {
+        padding: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    [class*='dateCell'] {
+        padding: 0.5rem;
+    }
+}

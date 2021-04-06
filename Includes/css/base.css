@@ -1,0 +1,25 @@
+:root {
+    --higlight-color-light: #E1D8F1;
+    --higlight-color: #765291;
+    --higlight-color-dark: #3f2a5e;
+    scroll-behavior: smooth;
+
+    --font-large: 32px;
+    --font-med: 24px;
+    --font-small: 16px;
+}
+
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+}
+
+* {
+    box-sizing: border-box;
+}

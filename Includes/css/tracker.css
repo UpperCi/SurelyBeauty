@@ -1,0 +1,171 @@
+:root {
+    --higlight-color-light: #E1D8F1;
+    --higlight-color: #765291;
+    --higlight-color-dark: #3f2a5e;
+    scroll-behavior: smooth;
+
+    --font-mega: 40px;
+    --font-large: 34px;
+    --font-medium: 26px;
+    --font-small: 18px;
+
+    --border-color: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1rem auto;
+    color: white;
+    font-size: var(--font-mega);
+
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    background-color: var(--higlight-color);
+}
+
+a {
+    color: white !important;
+    text-decoration: none;
+
+    font-size: var(--font-medium);
+    /*font-weight: bold;*/
+}
+
+#afspraak-download {
+    font-family: 'Roboto', sans-serif;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+
+    background-color: var(--higlight-color);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    transition: background-color 0.2s;
+}
+
+#afspraak-download:hover {
+    background-color: var(--higlight-color-dark);
+    cursor: pointer;
+}
+
+#afspraak-card {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: var(--higlight-color-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#afspraak-tijd {
+    font-family: 'Roboto', sans-serif;
+}
+
+#afspraak-tijd h2, h3 {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto auto 0.5rem;
+}
+
+#afspraak-tijd h2 {
+    font-size: var(--font-large);
+}
+
+#afspraak-tijd h3 {
+    font-size: var(--font-medium);
+}
+
+#afspraak-status {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    text-align: -moz-center;
+}
+
+#afspraak-status h2 {
+    font-size: var(--font-large);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem 0;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+#afspraak-behandelingen {
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#afspraak-behandelingen h3 {
+
+    font-size: var(--font-medium);
+}
+
+ul {
+    padding: 0 1rem;
+    margin: 0 0 1rem 0;
+}
+
+li {
+    font-size: var(--font-small);
+    list-style: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#afspraak-contact {
+    border-bottom: 1px solid var(--border-color);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#afspraak-contact div {
+    min-width: 5rem;
+    font-size: var(--font-small);
+}
+
+#afspraak-contact div:first-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+#afspraak-contact p {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+@media only screen and (max-width: 400px) {
+    :root {
+        --font-mega: 38px;
+        --font-large: 32px;
+        --font-medium: 26px;
+        --font-small: 16px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    #afspraak-contact div:first-child {
+        display: none;
+    }
+}

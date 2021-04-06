@@ -1,0 +1,301 @@
+body {
+    display: flex;
+    margin: 0;
+    background-color: var(--higlight-color);
+    padding-top: 1rem;
+}
+
+main {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.afspraak {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.afspraak-tijd {
+    width: calc(100% - 4rem);
+    font-size: var(--font-med);
+    margin: 0.2rem 0;
+    align-self: center;
+}
+
+.afspraak-email i {
+    font-size: var(--font-large);
+}
+
+.afspraak input {
+    width: calc(50% - 2rem);
+    margin: 0 1rem;
+}
+
+.overzicht {
+    flex: 1;
+    border-radius: 1rem;
+    padding: 1rem 0;
+    margin: 1rem;
+}
+
+.adminComp, #kalender-container {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.cal-timeslot-in {
+    display: inline-flex;
+}
+
+.cal-timeslot-display, .afspraak-periode {
+    flex: 4;
+}
+
+.timeslot-del {
+    cursor: pointer;
+    text-align: right;
+}
+
+.afspraak-overzicht-container, .cal-timeslot-in {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--higlight-color-light);
+    min-width: 100%;
+    height: fit-content;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+}
+
+.afspraak-periode, .afspraak-email, .afspraak-link, .timeslot-del, .cal-timeslot-display {
+    margin: 0.5rem;
+    font-size: var(--font-med);
+}
+
+.afspraak-email, .afspraak-link, .timeslot-del {
+    color: rgba(0, 0, 128, 0.7);
+    transition: all 0.2s;
+}
+
+.afspraak-email:hover, .afspraak-link:hover, .timeslot-del:hover {
+    color: rgb(0,0,128);
+}
+
+.cal-timeslot-in {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.overzicht-desc {
+    color: white;
+    font-size: var(--font-large);
+    font-family: 'Robot', sans-serif;
+    text-align: -moz-center;
+    text-align: center;
+    margin-bottom: 0;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+#afspraak-adder {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1rem auto;
+
+    background-color: var(--higlight-color-light);
+}
+
+#afpsraak-adder-btn {
+    font-size: 2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: fit-content;
+    margin: auto 1rem;
+
+    background-color: var(--higlight-color);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    transition: background-color 0.2s, box-shadow 0.2s, border-radius 0.4s;
+}
+
+#afpsraak-adder-btn:hover {
+    background-color: var(--higlight-color-dark);
+    border-radius: 25%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#do-erase-label {
+    color: black;
+    background-color: var(--higlight-color-light);
+    font-size: var(--font-large);
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 50%;
+    padding: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.2s;
+}
+
+#do-erase-label:hover {
+    color: white;
+    background-color: var(--higlight-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#do-erase-label.selected {
+    background-color: var(--higlight-color-dark) !important;
+    color: white;
+    border-radius: 25%;
+}
+
+#do-repeat-label {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    max-width: fit-content !important;
+    cursor: pointer;
+
+    transition: all 0.2s, border-radius 0.5s;
+}
+
+#do-repeat-label.selected {
+    background-color: var(--higlight-color);
+    color: white;
+}
+
+#do-repeat-label:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#do-repeat-label.selected:hover {
+    background-color: var(--higlight-color-dark);
+}
+
+#kalender-container {
+    background-color: white;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+#overzichten {
+    display: flex;
+}
+
+#repeat-full {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1rem auto auto;
+}
+
+#repeat-full, #repeat-div {
+    display: flex;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: var(--font-med) !important;
+}
+
+#afspraak-overzicht {
+    float: right;
+    border-radius: 1rem 0 0 1rem;
+    background-color: white;
+
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+#kalender-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#kalender-date-desc {
+    flex: 1;
+    align-self: flex-end;
+    margin: auto;
+}
+
+.time-desc, #time-repeat-type, #time-repeat-amount, #do-repeat-label {
+    max-width: 6rem;
+    margin: 0 0.2em;
+    align-self: center;
+}
+
+#time-repeat-amount {
+    /*max-w*/
+}
+
+.dateCellOpen.deleter:hover, .dateCellOpen.deleter:focus {
+    background-color: rgba(255, 0, 0, 0.6);
+    color: white;
+    outline: none;
+    border-radius: 50%;
+    transition: background-color 0.1s, border-radius 0.3s, color 0.1s;
+}
+
+.dateCellOpen.deleter.selected {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    border-radius: 25%;
+    transition: background-color 0.2s, border-radius 0.7s;
+}
+
+[id*='time-'] {
+    border: 0;
+    outline: 0;
+    font-size: var(--font-med);
+    font-family: 'Roboto', sans-serif;
+
+    border-bottom: 1px solid black;
+    margin: 0 0.5rem;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.2rem 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        display: block;
+    }
+    #afspraak-overzicht {
+        border-radius: 1rem;
+        background-color: white;
+
+        height: fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 1rem auto;
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #overzichten {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    :root {
+        --font-large: 26px;
+        --font-med: 20px;
+        --font-small: 16px;
+    }
+}
